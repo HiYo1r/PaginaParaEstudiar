@@ -332,9 +332,11 @@ function createEmoji(){
     }, 14000);
 }
 
-setInterval(createEmoji, 180);
+const isMobile = window.innerWidth <= 480;
 
-for(let i = 0; i < 80; i++){
+setInterval(createEmoji, isMobile ? 600 : 180);
+
+for(let i = 0; i < (isMobile ? 20 : 80); i++){
     setTimeout(createEmoji, i * 80);
 }
 function getFemaleVoice(){
