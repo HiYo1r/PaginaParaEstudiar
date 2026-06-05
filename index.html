@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink English Trainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="emoji-background" id="emojiBackground"></div>
+
+<div class="falling"></div>
+
+<main class="app">
+    <section class="hero">
+        <span>🌸 Vianka´s Mode</span>
+        <h1>ENGLISH AND SPANISH</h1>
+        <p>Traduce el término en español al inglés</p>
+    </section>
+
+    <section class="stats">
+        <div>✅ <b id="correct">0</b><small>Correctas</small></div>
+        <div>❌ <b id="wrong">0</b><small>Incorrectas</small></div>
+        <div>🔥 <b id="streak">0</b><small>Racha</small></div>
+    </section>
+
+    <section class="card">
+        <div class="top">
+            <p id="progressText">1 / 100</p>
+            <p id="percent">0%</p>
+        </div>
+
+        <div class="bar">
+            <div id="progress"></div>
+        </div>
+
+        <p class="question">¿Cómo se dice en inglés?</p>
+
+        <h2 id="spanishWord"></h2>
+
+        <input type="text" id="answer" placeholder="Escribe tu respuesta..." autocomplete="off">
+
+        <button onclick="checkAnswer()">Comprobar 💗</button>
+
+        <p id="message"></p>
+
+        <div class="action-buttons">
+            <button id="playBtn" onclick="playPronunciation()" class="play-btn">
+                🔊 Play pronunciation
+            </button>
+
+            <button id="sentenceBtn" onclick="speakExample()" class="sentence-btn">
+                🎧 Escuchar ejemplo
+            </button>
+            <button id="nextBtn" onclick="nextWord()" class="next-btn">
+                ➡️ Siguiente palabra
+            </button>
+        </div>
+
+        <p id="sentence"></p>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
